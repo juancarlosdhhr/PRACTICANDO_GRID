@@ -1,0 +1,22 @@
+/* Lo primero que vamos a hacer es preparar el contenedor */
+
+.container {
+width: 80%;
+margin: auto; /* para que el contenedor se centre en la pagina */
+margin-top: 200px;
+height: 500px;
+background-color: rgb(230, 227, 67);
+display: grid; 
+gap: 15px;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+justify-content: center;
+align-content: center;
+grid-template-areas: ;
+}
+
+.item {
+background-color: aqua;
+
+
+}
