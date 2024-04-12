@@ -24,11 +24,20 @@ border: 2px solid black;
 
 header {
 background-color: orange;
-grid-row-start: 1; /* Quiero que mi header empiece en la fila 1 */
-grid-row-end: 2 ; /* Quiero que mi header acabe en la fila 2 */
-grid-column-start: 1; /* Quiero que mi header empiece en la columna 1 */
-grid-column-end: 4; /* Quiero que mi header acabe en la columna 4
+/* grid-row-start: 1; */ /* Quiero que mi header empiece en la fila 1 */
+/* grid-row-end: 2 ; */ /* Quiero que mi header acabe en la fila 2 */
+
+/* DE FORMA ABREVIADA: */
+grid-row: 1 / 2;
+
+/* grid-column-start: 1; */ /* Quiero que mi header empiece en la columna 1 */
+/* grid-column-end: 4; */ /* Quiero que mi header acabe en la columna 4
  */
+
+ /* DE FORMA ABREVIADA: */
+ grid-column: 1 / 4
+
+
 }
 
 aside {
@@ -40,10 +49,14 @@ grid-row-end: 4;
 
 main {
 background-color: aqua;
-grid-row-start:2 ;
+/* grid-row-start:2 ;
 grid-row-end:4 ;
 grid-column-start: 2;
-grid-column-end: 4;
+grid-column-end: 4; */
+
+/* SE PUEDE ABREVIAR MAS AUN CON GRID AREA: */
+grid-area:      2     /            2             /            4        /          4; 
+/* donde empieza la fila / donde empieza la columna / donde acaba la fila / donde acaba la columna */
 
 }
 
