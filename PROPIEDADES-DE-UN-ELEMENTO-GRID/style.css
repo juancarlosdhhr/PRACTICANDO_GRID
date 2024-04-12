@@ -1,14 +1,22 @@
-/* Vamos a ahcer algo similar al layout que hicimos con flex (estructuramos nuestra pagina) pero con display grid */
+/* Vamos a hacer algo similar al layout que hicimos con flex (estructuramos nuestra pagina) pero con display grid */
 
 .container {
-    display: grid;
+   display:grid;
+ 
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de 1fr cada una*/
     grid-template-rows: repeat(4, 1fr) ; /* 4 filas de 1 fraccion cada una*/
     width: 100%;
     height: 100svg; /* Es el alto de nuestra página */
     margin: 0; /* Para evitar problemas */
+    background-color: beige;
+   
 }
 
+
+.container > * { /* Para maquetar todos los hijos directos de mi container */
+border: 2px solid black;
+
+}
 
 /* ELEMENTOS HIJOS O GRID ITEMS*/
 
@@ -16,21 +24,34 @@
 
 header {
 background-color: orange;
-
+grid-row-start: 1; /* Quiero que mi header empiece en la fila 1 */
+grid-row-end: 2 ; /* Quiero que mi header acabe en la fila 2 */
+grid-column-start: 1; /* Quiero que mi header empiece en la columna 1 */
+grid-column-end: 4; /* Quiero que mi header acabe en la columna 4
+ */
 }
 
 aside {
 background-color: yellow;
-
+grid-row-start: 2;
+grid-row-end: 4;
 }
 
 
 main {
 background-color: aqua;
+grid-row-start:2 ;
+grid-row-end:4 ;
+grid-column-start: 2;
+grid-column-end: 4;
 
 }
 
 footer {
 background-color: brown;
+grid-row-start: 4;
+grid-row-end:5 ;
+grid-column-start:1 ;
+grid-column-end:4 ;
 
 }
