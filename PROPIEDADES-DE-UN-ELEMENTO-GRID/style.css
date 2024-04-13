@@ -79,7 +79,7 @@ grid-row-end:5 ;
 grid-column-start:1 ;
 grid-column-end:4 ; */
 
-grid-area: footer;
+grid-area: footer  ;
 
 }
 
