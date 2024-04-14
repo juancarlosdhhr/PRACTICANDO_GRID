@@ -6,6 +6,9 @@
   
   body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #858585;
+background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+
   }
 
   section {
@@ -13,7 +16,7 @@ display: grid;
 gap: 20px;
 padding: 20px;
 /* grid-template-columns: 200px 200px 200px 200px ; */ /* 1fr es como decirle "Lo que tu puedas" */
-grid-template-columns: repeat(4, 200px);
+/* grid-template-columns: repeat(4, 200px); */
 /* REPITE EL NUMERO DE VECES QUE PUEDAS PARA RELLENAR EL ESPACIO COLUMNAS CON UN MINIMO DE 300PX
 Y MAXIMO LO QUE PUEDAS */
 grid-template-columns: repeat(auto-fill, minmax (300px, 1fr)); /* Para que la galeria se adapte siempre al tamaño de 
@@ -23,7 +26,9 @@ mi ventana */
 200px
 200px
 200px; */
-grid-auto-rows: 300px; /* Hazme filas automáticas de 300px cuando no quepan */
+/* grid-auto-rows: 300px; */ /* Hazme filas automáticas de 300px cuando no quepan */
+
+
 }
 
   section > img {
@@ -31,9 +36,20 @@ grid-auto-rows: 300px; /* Hazme filas automáticas de 300px cuando no quepan */
     height: 100%;
     object-fit: cover;
     box-shadow:rgb(38, 57, 77) 0px 20px 30px -10px; 
+    /* filter: saturate(0%); */ /* Si quisiesemos que nuestras imagenes se vean en blanco y negro */
+    transition: 0.5s;
   }
 
-  section >img
+ /*  section >img:hover {
+filter: saturate(1);
+
+  } */
+
+  section:hover img:not(:hover)  { /* En esta seccion, cuando hagas hover en la seccione entera te vas a empezar a activar */
+filter:saturate(0);
+opacity: 40% ;
+
+  }
 
 
 /* Vamos a elegir una foto en concreto para maquetarla. Puedo o bien darle un ID a cada foto
@@ -44,3 +60,13 @@ grid-column: 2 / 5;
 grid-row:  1 / 3;
 
   }
+
+  section > img:nth-child(1) {
+object-position: center;
+  }
+
+ /*  Si quisiesemos ponerle un fondo de pantalla podemos buscarlo en la we transparenttextures.com */
+
+
+
+
