@@ -11,6 +11,12 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds-li
 
   }
 
+  /* @media (max-width: 550px) {
+  section{
+    grid-template-columns: 1fr;
+  }
+} */
+
   section {
 display: grid;
 gap: 20px;
@@ -26,7 +32,7 @@ mi ventana */
 200px
 200px
 200px; */
-/* grid-auto-rows: 300px; */ /* Hazme filas automáticas de 300px cuando no quepan */
+grid-auto-rows: 300px; /* Hazme filas automáticas de 300px cuando no quepan */
 
 
 }
